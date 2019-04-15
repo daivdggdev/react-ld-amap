@@ -170,7 +170,7 @@ class BaseMap extends Component<MapProps, {mapLoaded: boolean}> {
   createInstance() {
     if (!this.map) {
       const options = this.buildCreateOptions()
-      this.map = new window.AMap.Map(this.mapWrapper, options)
+      this.map = new window.IMAP.Map(this.mapWrapper, options)
       // install map plugins
       this.setPlugins(this.props)
       this.props.onInstanceCreated && this.props.onInstanceCreated()
@@ -298,7 +298,7 @@ class BaseMap extends Component<MapProps, {mapLoaded: boolean}> {
       const { onCreated, ...restOpts } = opts
       const initOpts = {...defaultOpts[name], ...restOpts}
       this.map.plugin([`AMap.${name}`], () => {
-        this.pluginMap[name] = new window.AMap[name](initOpts)
+        this.pluginMap[name] = new window.IMAP[name](initOpts)
         this.map.addControl(this.pluginMap[name])
         if (isFun(onCreated)) {
           onCreated(this.pluginMap[name])
@@ -314,7 +314,7 @@ class BaseMap extends Component<MapProps, {mapLoaded: boolean}> {
       const { onCreated, ...restOpts } = opts
       const initOpts = {...defaultOpts.ControlBar, ...restOpts}
       this.map.plugin(['AMap.ControlBar'], () => {
-        this.pluginMap.ControlBar = new window.AMap.ControlBar(initOpts)
+        this.pluginMap.ControlBar = new window.IMAP.ControlBar(initOpts)
         this.map.addControl(this.pluginMap.ControlBar)
         if (isFun(onCreated)) {
           onCreated(this.pluginMap.ControlBar)

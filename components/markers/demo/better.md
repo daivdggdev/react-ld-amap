@@ -14,7 +14,7 @@ order: 11
 
 
 ```jsx
-import { Map, Markers } from 'react-amap';
+import { Map, Markers } from 'react-ld-amap';
 
 const alphabet = 'ABCDEFGHIJKLMNOP'.split('');
 const randomMarker = (len) => (

@@ -3,7 +3,7 @@ title: status 属性
 order: 6
 ---
 
-通过 status 属性可以统一配置其他几个布尔值属性，[这些属性](https://github.com/ElemeFE/react-amap/blob/master/components/map/index.js#L46)包括：
+通过 status 属性可以统一配置其他几个布尔值属性，[这些属性](https://github.com/ElemeFE/react-ld-amap/blob/master/components/map/index.js#L46)包括：
 > `animateEnable`,  `doubleClickZoom`,  `dragEnable`,  `isHotspot`,  `jogEnable`,  `keyboardEnable`,  `resizeEnable`,  `rotateEnable`,  `scrollWheel`,  `touchZoom`, `zoomEnable`
 
 它们既可以通过 status 属性提供对象统一配置，也可以单独提供属性配置。注意， status 会覆盖其他的，即，如果既配置了 `animateEnable` 属性，又配置了 status 为 `{ animateEnable }`，后者会覆盖前者的取值。
@@ -11,7 +11,7 @@ order: 6
 [JSFIDDLE 在线示例](https://jsfiddle.net/ioslh/y9cv20cv/2/)
 
 ```jsx
-import { Map } from 'react-amap';
+import { Map } from 'react-ld-amap';
 class App extends React.Component{
   constructor() {
     super();

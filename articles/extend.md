@@ -6,11 +6,11 @@ order: 2
 
 ### 如何写一个自定义的地图组件
 
-react-amap 组件库目前包含的组件是有限的，所以最常碰到的疑问是：
+react-ld-amap 组件库目前包含的组件是有限的，所以最常碰到的疑问是：
 
-> 如果我想要的地图组件在 react-amap 中没有怎么办？
+> 如果我想要的地图组件在 react-ld-amap 中没有怎么办？
 
-现在，1.0.0 版本的 react-amap 拥有了扩展能力，你现在可以自己写一个地图组件了。然后，你就可以像这样使用你的组件，比如：
+现在，1.0.0 版本的 react-ld-amap 拥有了扩展能力，你现在可以自己写一个地图组件了。然后，你就可以像这样使用你的组件，比如：
 
 ```jsx
 const MyMapComponent = (props) => {
@@ -30,12 +30,12 @@ const MyMapComponent = (props) => {
 1. 通过 props 的 `__map__` 属性访问创建好的高德地图实例；
 2. *[Deprecated]* 原有通过 `__ele__` 属性访问地图容器方式不推荐，可以直接使用地图的 `getContainer` 方法获取。
 
-拥有访问这两个属性的能力后，你可以根据高德原生 API 做高德允许你做的一切事情。实际上，react-amap 中的其他组件就是这么做的。
+拥有访问这两个属性的能力后，你可以根据高德原生 API 做高德允许你做的一切事情。实际上，react-ld-amap 中的其他组件就是这么做的。
 
 下面的例子中，我们写了一个自定义的 `ZoomCtrl` 组件，来定义一个自己的地图 zoom 控制器。在线的示例请访问 [jsfiddle](https://jsfiddle.net/ioslh/h4u8mdng/25/)。
 
 ```jsx
-import { Map } from 'react-amap';
+import { Map } from 'react-ld-amap';
 
 const ZoomCtrl = (props) => {
   const map = props.__map__;
@@ -75,7 +75,7 @@ ReactDOM.render(
 )
 ```
 
-默认情况下， react-amap 会给所有 Map 的子组件注入 `__ele__`, `__map__` 这两个属性，如果你明确不需要注入（比如跟你自己的属性名有冲突），可以设置组件的 `preventAmap` 属性为 `true`。不过即便注入了只要不使用并且也不存在属性名冲突的问题，也没有什么副作用。
+默认情况下， react-ld-amap 会给所有 Map 的子组件注入 `__ele__`, `__map__` 这两个属性，如果你明确不需要注入（比如跟你自己的属性名有冲突），可以设置组件的 `preventAmap` 属性为 `true`。不过即便注入了只要不使用并且也不存在属性名冲突的问题，也没有什么副作用。
 
 ```jsx
 const MyNormalComponent = (props) => {

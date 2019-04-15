@@ -5,7 +5,7 @@ title: 基本用法
 本例演示了如何创建一个折线以及动态改变折线的属性
 
 ```jsx 
-import { Map, Polyline } from 'react-amap';
+import { Map, Polyline } from 'react-ld-amap';
 
 const randomPath = () => ({
  longitude: 60 + Math.random() * 50,

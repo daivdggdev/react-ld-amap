@@ -1,6 +1,6 @@
 {
-  "name": "react-amap",
-  "version": "1.2.8",
+  "name": "react-ld-amap",
+  "version": "0.2.8",
   "description": "AMap Component Based On React",
   "main": "lib/index.js",
   "types": "types/index.d.ts",
@@ -17,16 +17,16 @@
   "author": "ohislh@gmail.com",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/elemefe/react-amap.git"
+    "url": "git+https://github.com/elemefe/react-ld-amap.git"
   },
   "keywords": [
     "map",
     "react"
   ],
   "bugs": {
-    "url": "https://github.com/ElemeFE/react-amap/issues"
+    "url": "https://github.com/ElemeFE/react-ld-amap/issues"
   },
-  "homepage": "https://github.com/ElemeFE/react-amap",
+  "homepage": "https://github.com/ElemeFE/react-ld-amap",
   "license": "MIT",
   "devDependencies": {
     "@types/react": "^16.0.10",

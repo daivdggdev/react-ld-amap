@@ -3,12 +3,12 @@ title: 在 Map 下添加自定义地图组件
 order: 7
 ---
 
-react-amap 组件库目前包含大概十个子组件，如果这些子组件的实现与你的需求不符合，或者没有你想要的组件，你可以写一个自定义的地图组件。这部分内容参考[自定义地图组件](/articles/extend)。
+react-ld-amap 组件库目前包含大概十个子组件，如果这些子组件的实现与你的需求不符合，或者没有你想要的组件，你可以写一个自定义的地图组件。这部分内容参考[自定义地图组件](/articles/extend)。
 
 [JSFIDDLE 在线示例](https://jsfiddle.net/ioslh/h4u8mdng/25/)
 
 ```jsx
-import { Map } from 'react-amap';
+import { Map } from 'react-ld-amap';
 
 const MyMapComponent = (props) => {
   const map = props.__map__;

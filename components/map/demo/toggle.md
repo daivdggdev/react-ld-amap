@@ -6,7 +6,7 @@ order: 17
 卸载 Map 组件时自动销毁实例，清空容器。
 
 ```jsx
-import { Map } from 'react-amap';
+import { Map } from 'react-ld-amap';
 
 class App extends React.Component{
   constructor(props) {

@@ -11,7 +11,7 @@ Markers 组件的事件绑定方式与 Marker 类似，都是定义 events 属�
 
 
 ```jsx
-import { Map, Markers } from 'react-amap';
+import { Map, Markers } from 'react-ld-amap';
 
 const randomMarker = (len) => (
   Array(len).fill(true).map((e, idx) => ({

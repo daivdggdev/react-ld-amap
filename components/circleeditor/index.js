@@ -86,7 +86,7 @@ class CircleEditor extends React.Component<EditorProps, {}> {
   }
 
   createEditorInstance(props: EditorProps) {
-    this.circleEditor = new window.AMap.CircleEditor(
+    this.circleEditor = new window.IMAP.CircleEditor(
       this.map, this.circle
     )
     const events = this.exposeEditorInstance(props)

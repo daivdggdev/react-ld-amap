@@ -5,7 +5,7 @@ order: 0
 
 ### 组件列表
 
-react-amap 目前已经包含的组件如下：
+react-ld-amap 目前已经包含的组件如下：
 
 | 名称 | 说明 |
 |------|------|
@@ -44,7 +44,7 @@ react-amap 目前已经包含的组件如下：
 
 ```jsx 
 import React from 'react';
-import { Map, Polygon } from 'react-amap';
+import { Map, Polygon } from 'react-ld-amap';
 
 class App extends React.Component{
     constructor(){

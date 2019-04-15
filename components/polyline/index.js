@@ -90,7 +90,7 @@ class Polyline extends Component<LineProps, {loaded: boolean}> {
   createMapPolyline(props: LineProps) {
     const options = this.buildCreateOptions(props)
     options.map = this.map
-    this.polyline = new window.AMap.Polyline(options)
+    this.polyline = new window.IMAP.Polyline(options)
     this.setState({
       loaded: true
     })

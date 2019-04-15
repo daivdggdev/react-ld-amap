@@ -6,7 +6,7 @@ order: 1
 这个例子演示如何创建一个圆形，并且动态改变属性；
 
 ```jsx
-import { Map, Circle } from 'react-amap';
+import { Map, Circle } from 'react-ld-amap';
 const randomIndex = (len) => (Math.floor(Math.random() * len));
 const randomColor = () => {
   const chars = '0123456789abcdef'.split('');

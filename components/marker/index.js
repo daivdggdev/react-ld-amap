@@ -69,7 +69,7 @@ class Marker extends React.Component<MarkerProps, {}> {
 
   createMarker(props: MarkerProps) {
     const options = this.buildCreateOptions(props)
-    this.marker = new window.AMap.Marker(options)
+    this.marker = new window.IMAP.Marker(options)
 
     this.marker.render = (function(marker) {
       return function(component) {
@@ -98,7 +98,7 @@ class Marker extends React.Component<MarkerProps, {}> {
     if (('render' in props) || ('children' in props && props.children)) {
       this.createContentWrapper()
       if ('className' in props && props.className) {
-        // https://github.com/ElemeFE/react-amap/issues/40
+        // https://github.com/ElemeFE/react-ld-amap/issues/40
         this.contentWrapper.className = props.className
       }
     }
@@ -112,7 +112,7 @@ class Marker extends React.Component<MarkerProps, {}> {
   setChildComponent(props: MarkerProps) {
     if (this.contentWrapper) {
       if ('className' in props && props.className) {
-        // https://github.com/ElemeFE/react-amap/issues/40
+        // https://github.com/ElemeFE/react-ld-amap/issues/40
         this.contentWrapper.className = props.className
       }
       if ('render' in props) {

@@ -8,7 +8,7 @@ order: 3
 [JSFIDDLE 在线示例](https://jsfiddle.net/ioslh/mxc0h16p/6/)
 
 ```jsx
-import { Map } from 'react-amap';
+import { Map } from 'react-ld-amap';
 class App extends React.Component{
   render(){
     const events = {

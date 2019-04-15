@@ -10,7 +10,7 @@ order: 6
 [JSFIDDLE 在线示例](https://jsfiddle.net/ioslh/mxc0h16p/7/)
 
 ```jsx
-import { Map, Marker } from 'react-amap';
+import { Map, Marker } from 'react-ld-amap';
 import { Button } from 'antd';
 const styleA = {
   position: 'absolute',

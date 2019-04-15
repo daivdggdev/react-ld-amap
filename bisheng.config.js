@@ -16,10 +16,10 @@ module.exports = {
   port: 9001,
   webpackConfig(config) {
     config.resolve.alias = {
-      'react-amap': path.join(process.cwd(), 'components'),
+      'react-ld-amap': path.join(process.cwd(), 'components'),
       'react-router': 'react-router/umd/ReactRouter'
     };
     return config;
   },
-  root: '/react-amap/'
+  root: '/react-ld-amap/'
 };

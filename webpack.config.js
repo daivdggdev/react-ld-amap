@@ -5,8 +5,8 @@ var webpackConfig = {
   entry: './components/',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: process.env.NODE_ENV === 'production' ? 'react-amap.min.js' : 'react-amap.js',
-    library: 'ReactAMAP',
+    filename: process.env.NODE_ENV === 'production' ? 'react-ld-amap.min.js' : 'react-ld-amap.js',
+    library: 'ReactLDAMAP',
     libraryTarget: 'umd'
   },
   module: {

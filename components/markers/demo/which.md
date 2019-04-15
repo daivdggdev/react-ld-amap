@@ -7,7 +7,7 @@ order: 12
 
 
 ```jsx
-import { Map, Markers } from 'react-amap';
+import { Map, Markers } from 'react-ld-amap';
 // 辅助函数，随机生成一个坐标
 const randomPosition = () => ({
   longitude: 120 + Math.random() * 20,

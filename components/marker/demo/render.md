@@ -10,7 +10,7 @@ order: 4
 + render 方法：我们在高德原生的 Marker 实例上挂载了一个 render 方法，可以使你随时调用从而来改变 Marker 外观。render 方法传入的参数跟上面 render 属性取值一样。可以参考下面的例子里`mouseover`和`mouseout`方法了的使用。
 
 ```jsx
-import { Map, Marker } from 'react-amap';
+import { Map, Marker } from 'react-ld-amap';
 
 const styleA = {
   border: '1px solid #000',

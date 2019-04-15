@@ -1,5 +1,5 @@
 import React from 'react';
-import AMap from 'react-amap';
+import AMap from 'react-ld-amap';
 require('../static/playground.less');
 
 const InfoWindow = AMap.InfoWindow;
@@ -24,10 +24,10 @@ export default class Playground extends React.Component {
   }
 
   renderMyLogo() {
-    return <div className="react-amap-icon">
+    return <div className="react-ld-amap-icon">
       <a href="#">
         <i></i>
-        <p>react-amap</p>
+        <p>react-ld-amap</p>
       </a>
     </div>;
   }

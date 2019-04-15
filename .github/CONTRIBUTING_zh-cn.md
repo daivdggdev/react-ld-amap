@@ -1,17 +1,17 @@
-# react-amap Contributing Guide
+# react-ld-amap Contributing Guide
 
-Hi! 首先感谢你使用 react-amap。
+Hi! 首先感谢你使用 react-ld-amap。
 
-react-amap 是一个基于 React 封装的高德地图组件库。
+react-ld-amap 是一个基于 React 封装的高德地图组件库。
 
-react-amap 的成长离不开大家的支持，如果你愿意为 react-amap 贡献代码或提供建议，请阅读以下内容。
+react-ld-amap 的成长离不开大家的支持，如果你愿意为 react-ld-amap 贡献代码或提供建议，请阅读以下内容。
 
 ## Issue 规范
 - issue 仅用于提交 Bug 或 Feature，其它内容可能会被直接关闭。
 
 - 在提交 issue 之前，请搜索相关内容是否已被提出。
 
-- 请说明 react-amap 的版本号，并提供操作系统和浏览器信息。推荐使用 [JSFiddle](https://jsfiddle.net/) 生成在线 demo，这能够更直观地重现问题。
+- 请说明 react-ld-amap 的版本号，并提供操作系统和浏览器信息。推荐使用 [JSFiddle](https://jsfiddle.net/) 生成在线 demo，这能够更直观地重现问题。
 
 ## Pull Request 规范
 - 请先 fork 一份到自己的项目下，不要直接在仓库下建分支。

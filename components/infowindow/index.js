@@ -110,7 +110,7 @@ class InfoWindow extends Component<IWProps, {}> {
 
   createInfoWindow(props: IWProps) {
     const options = this.buildCreateOptions(props)
-    this.infoWindow = new window.AMap.InfoWindow(options)
+    this.infoWindow = new window.IMAP.InfoWindow(options)
     this.props.onInstanceCreated && this.props.onInstanceCreated()
   }
 

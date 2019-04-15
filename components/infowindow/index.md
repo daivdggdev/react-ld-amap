@@ -42,7 +42,7 @@ title: InfoWindow 组件
 
 ## 如何写信息窗体内容
 
-react-amap 提供两种方式定义信息窗体的内容：
+react-ld-amap 提供两种方式定义信息窗体的内容：
 + 按照高德原生的方式通过定义 content 属性（取值是一个字符串或者一个 DOM）；
 + 不设置 content 属性，直接以 JSX 语法在 InfoWindow 标签下写子元素，即 props.children;
 

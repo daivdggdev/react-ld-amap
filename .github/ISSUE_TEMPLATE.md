@@ -3,7 +3,7 @@
  -->
 
 + [ ] 我已经搜索过 issue，没有类似的问题，或者类似的问题仍然没有解决方案。
-+ [ ] 我已经搜索过[文档](https://elemefe.github.io/react-amap/articles/start)，并且仍然没有找到解决方案。
++ [ ] 我已经搜索过[文档](https://elemefe.github.io/react-ld-amap/articles/start)，并且仍然没有找到解决方案。
 + [ ] 我写了个问题重现的例子，链接或者代码将会贴在下面。
 
 <!--

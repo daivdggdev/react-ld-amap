@@ -5,7 +5,7 @@ title: GroundImage 的使用
 演示动态修改属性，以及绑定事件。
 
 ```jsx
-import { Map, GroundImage } from 'react-amap';
+import { Map, GroundImage } from 'react-ld-amap';
 
 function randomBoundsAndCenter() {
   // 随机生成一个中心点，然后据此生成一个边界

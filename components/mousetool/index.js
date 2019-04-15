@@ -39,7 +39,7 @@ class MouseTool extends React.Component<MTProps, {}> {
   loadToolInstance() {
     return new Promise(resolve => {
       this.map.plugin(['AMap.MouseTool'], () => {
-        this.tool = new window.AMap.MouseTool(this.map)
+        this.tool = new window.IMAP.MouseTool(this.map)
         resolve()
       })
     })

@@ -5,7 +5,7 @@ order: 1
 
 
 ```jsx
-import { Map, Polygon } from 'react-amap';
+import { Map, Polygon } from 'react-ld-amap';
 const randomPath = () => ({
    longitude: 100 + Math.random() * 50,
    latitude: 10 + Math.random() * 40,

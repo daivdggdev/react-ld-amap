@@ -6,7 +6,7 @@ order: 1
 这个例子演示了如何创建信息窗体和窗体的事件绑定，以及动态改变各个动态属性。
 
 ```jsx 
-import { Map, InfoWindow } from 'react-amap';
+import { Map, InfoWindow } from 'react-ld-amap';
 class App extends React.Component{
   constructor() {
     super();

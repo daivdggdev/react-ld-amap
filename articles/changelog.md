@@ -19,7 +19,7 @@ order: 11
 
 ### 修复
 
-1. 使用 CDN 接入 react-amap 资源时 Marker 组件有个严重的 Bug，不过似乎没人发现，不管了反正已经偷偷修好了。
+1. 使用 CDN 接入 react-ld-amap 资源时 Marker 组件有个严重的 Bug，不过似乎没人发现，不管了反正已经偷偷修好了。
 
 ---
 
@@ -47,10 +47,10 @@ order: 11
 1. 大幅重构 Map 组件；支持 `animateEnable`、`doubleClickZoom` 等属性的动态配置。
 2. 支持 3D 模式。
 3. 新增控件 ControlBar。
-4. 删除了地图内层一个多余的 div。（[#48](https://github.com/ElemeFE/react-amap/issues/48)）
+4. 删除了地图内层一个多余的 div。（[#48](https://github.com/ElemeFE/react-ld-amap/issues/48)）
 3. 支持给 Map 提供 loading 组件以渲染加载效果。
-2. 支持给 Marker 组件添加 `className`。（[#40](https://github.com/ElemeFE/react-amap/issues/40)）
-3. 补充了 TypeScript 模块声明，可以在 TypeScript 项目中使用。（[#47](https://github.com/ElemeFE/react-amap/issues/47)）
+2. 支持给 Marker 组件添加 `className`。（[#40](https://github.com/ElemeFE/react-ld-amap/issues/40)）
+3. 补充了 TypeScript 模块声明，可以在 TypeScript 项目中使用。（[#47](https://github.com/ElemeFE/react-ld-amap/issues/47)）
 
 ---
 
@@ -66,7 +66,7 @@ order: 11
 
 ### 重大更新
 
-* 现在 react-amap 拥有了扩展能力，你可以自己写一个地图组件并且在 Map 中嵌入；相关文档请参考[自定义地图组件](/articles/extend)。
+* 现在 react-ld-amap 拥有了扩展能力，你可以自己写一个地图组件并且在 Map 中嵌入；相关文档请参考[自定义地图组件](/articles/extend)。
 
 ---
 
@@ -145,4 +145,4 @@ order: 11
 
 ## [2017-02-23] 0.0.1-rc.1
 
-### react-amap 发布
+### react-ld-amap 发布

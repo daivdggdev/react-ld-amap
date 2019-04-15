@@ -8,7 +8,7 @@ title: Map 组件
 
 在需要显示地图的地方使用；
 
-Map 组件是其他组件的基础，其他地图组件必须作为 Map 的子组件使用；Map 组件会给所有的子组件注入两个属性，`props.__ele__`和`props.__map__`，在拥有访问这两个属性的能力后，就可以根据高德原生 API 做高德允许你做的一切事情。react-amap 中的其他组件就是这么做的。所以，你也可以写出满足你业务需求的地图组件。关于这个详情以及示例请访问 [自定义地图组件](/articles/extend)。
+Map 组件是其他组件的基础，其他地图组件必须作为 Map 的子组件使用；Map 组件会给所有的子组件注入两个属性，`props.__ele__`和`props.__map__`，在拥有访问这两个属性的能力后，就可以根据高德原生 API 做高德允许你做的一切事情。react-ld-amap 中的其他组件就是这么做的。所以，你也可以写出满足你业务需求的地图组件。关于这个详情以及示例请访问 [自定义地图组件](/articles/extend)。
 
 
 ## API
@@ -51,7 +51,7 @@ Map 组件是其他组件的基础，其他地图组件必须作为 Map 的子�
 
 ### 其他静态属性
 
-Map 的静态属性有[如下 10 个](https://github.com/ElemeFE/react-amap/blob/master/components/map/index.js#L60)，属性的作用与取值参考[高德官网](http://lbs.amap.com/api/javascript-api/reference/map)
+Map 的静态属性有[如下 10 个](https://github.com/ElemeFE/react-ld-amap/blob/master/components/map/index.js#L60)，属性的作用与取值参考[高德官网](http://lbs.amap.com/api/javascript-api/reference/map)
 
 + `view`
 + `zooms`
@@ -127,4 +127,4 @@ const plugins = ['Scale', {
 ```
 
 
-注意：[react-amap 对插件的默认配置与高德官方的默认配置并不一致](https://github.com/ElemeFE/react-amap/issues/21)；如果在使用 react-amap 的这些插件后，与官方的表现不一致，请参考[官方文档](http://lbs.amap.com/api/javascript-api/reference/map-control)进行配置。
+注意：[react-ld-amap 对插件的默认配置与高德官方的默认配置并不一致](https://github.com/ElemeFE/react-ld-amap/issues/21)；如果在使用 react-ld-amap 的这些插件后，与官方的表现不一致，请参考[官方文档](http://lbs.amap.com/api/javascript-api/reference/map-control)进行配置。

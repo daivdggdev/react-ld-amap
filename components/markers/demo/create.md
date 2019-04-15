@@ -6,7 +6,7 @@ order: 1
 本及介绍创建大量标记的基本用法
 
 ```jsx
-import { Map, Markers } from 'react-amap';
+import { Map, Markers } from 'react-ld-amap';
 
 const randomPosition = () => ({
   longitude: 100 + Math.random() * 20,

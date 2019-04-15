@@ -4,7 +4,7 @@ title: CircleEditor 的使用
 
 
 ```jsx
-import { Map, Circle, CircleEditor } from 'react-amap';
+import { Map, Circle, CircleEditor } from 'react-ld-amap';
 class App extends React.Component{
   constructor(){
     super();

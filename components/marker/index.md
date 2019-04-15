@@ -12,7 +12,7 @@ title: Marker 组件
 
 ## API
 
-> 在阅读以下文档时记得区分 react-amap 创建的 Marker 实例，和高德地图原生的 Marker 实例。
+> 在阅读以下文档时记得区分 react-ld-amap 创建的 Marker 实例，和高德地图原生的 Marker 实例。
 
 
 ### 属性列表

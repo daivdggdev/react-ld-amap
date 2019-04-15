@@ -97,7 +97,7 @@ class Circle extends React.Component<CircleProps, {loaded: boolean}> {
   createInstance(props: CircleProps) {
     const options = this.buildCreateOptions(props)
     options.map = this.map
-    this.mapCircle = new window.AMap.Circle(options)
+    this.mapCircle = new window.IMAP.Circle(options)
     return Promise.resolve(this.mapCircle)
   }
 

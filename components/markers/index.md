@@ -18,7 +18,7 @@ Markers 组件大部分属性是静态属性；对坐标点的增加和删除会
 
 ## API
 
-> 在阅读以下文档时记得区分 react-amap 创建的 Markers 实例，和高德地图原生的 Marker 实例。
+> 在阅读以下文档时记得区分 react-ld-amap 创建的 Markers 实例，和高德地图原生的 Marker 实例。
 
 ### 动态属性
 

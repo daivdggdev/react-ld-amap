@@ -25,7 +25,7 @@ export const toLnglat = (pos) => {
     lng = pos.longitude
     lat = pos.latitude
   }
-  return hasWindow ? new window.AMap.LngLat(lng, lat) : null
+  return hasWindow ? new window.IMAP.LngLat(lng, lat) : null
 }
 
 export const toPixel = (ofst) => {
@@ -44,7 +44,7 @@ export const toPixel = (ofst) => {
     x = ofst.x;
     y = ofst.y;
   }
-  return hasWindow ? new window.AMap.Pixel(x, y) : null
+  return hasWindow ? new window.IMAP.Pixel(x, y) : null
 }
 
 export const toSize = (size) => {
@@ -54,7 +54,7 @@ export const toSize = (size) => {
   if ('getWidth' in size) {
     return size
   }
-  return hasWindow ? new window.AMap.Size(size.width, size.height) : null
+  return hasWindow ? new window.IMAP.Size(size.width, size.height) : null
 }
 
 export default {

@@ -3,10 +3,10 @@ title: useCluster 属性的使用
 order: 2
 ---
 
-在上一个例子中，需要在地图添加大量标记点，显示起来非常拥挤。高德提供了一个叫做 [AMap.MarkerClusterer](http://lbs.amap.com/api/javascript-api/reference/plugin#AMap.MarkerClusterer) 的聚合坐标点插件；在`react-amap` 组件中，你可以切换`useCluster`的值来选择是否启用这个插件。可以通过下面这个例子查看效果；记得放大地图查看聚合点是怎么展开的。
+在上一个例子中，需要在地图添加大量标记点，显示起来非常拥挤。高德提供了一个叫做 [AMap.MarkerClusterer](http://lbs.amap.com/api/javascript-api/reference/plugin#AMap.MarkerClusterer) 的聚合坐标点插件；在`react-ld-amap` 组件中，你可以切换`useCluster`的值来选择是否启用这个插件。可以通过下面这个例子查看效果；记得放大地图查看聚合点是怎么展开的。
 
 ```jsx
-import { Map, Markers } from 'react-amap';
+import { Map, Markers } from 'react-ld-amap';
 
 const randomMarker = (len) => (
   Array(len).fill(true).map((e, idx) => ({

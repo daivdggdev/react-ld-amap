@@ -78,7 +78,7 @@ class PolyEditor extends React.Component<EditorProps, {}> {
     }
     return new Promise((resolve) => {
       this.map.plugin(['AMap.PolyEditor'], () => {
-        this.polyEditor = new window.AMap.PolyEditor(
+        this.polyEditor = new window.IMAP.PolyEditor(
           this.map, this.poly
         )
         resolve(this.polyEditor)

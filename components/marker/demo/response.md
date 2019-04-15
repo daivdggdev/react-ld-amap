@@ -6,7 +6,7 @@ title: 动态更改 Marker 属性
 这个例子里展示用 state 管理图标的状态
 
 ```jsx
-import { Map, Marker } from 'react-amap';
+import { Map, Marker } from 'react-ld-amap';
 
 class App extends React.Component{
   constructor(){

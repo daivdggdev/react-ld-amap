@@ -5,7 +5,7 @@ order: 0
 
 
 ```jsx 
-import { Map, MouseTool } from 'react-amap';
+import { Map, MouseTool } from 'react-ld-amap';
 
 const layerStyle = {
   padding: '10px',

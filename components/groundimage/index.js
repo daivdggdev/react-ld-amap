@@ -102,7 +102,7 @@ class GroundImage extends React.Component<GIProps, {}> {
     } else {
       opacity = defaultOpts.opacity
     }
-    this.image = new window.AMap.GroundImage(src, bounds, {
+    this.image = new window.IMAP.GroundImage(src, bounds, {
       map: this.map,
       clickable,
       opacity
@@ -117,9 +117,9 @@ class GroundImage extends React.Component<GIProps, {}> {
     if ('getSouthWest' in rawBounds) {
       return rawBounds
     }
-    const bounds = new window.AMap.Bounds(
-      new window.AMap.LngLat(rawBounds.sw.longitude, rawBounds.sw.latitude),
-      new window.AMap.LngLat(rawBounds.ne.longitude, rawBounds.ne.latitude)
+    const bounds = new window.IMAP.Bounds(
+      new window.IMAP.LngLat(rawBounds.sw.longitude, rawBounds.sw.latitude),
+      new window.IMAP.LngLat(rawBounds.ne.longitude, rawBounds.ne.latitude)
     )
     return bounds
   }

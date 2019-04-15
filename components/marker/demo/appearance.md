@@ -8,7 +8,7 @@ title: 自定义 Marker 的外观
 除此之外，还可以使用 render 属性和 render 方法来定义 Marker 外观（0.2.2更新），参考下一个示例。
 
 ```jsx
-import { Map, Marker } from 'react-amap';
+import { Map, Marker } from 'react-ld-amap';
 
 class App extends React.Component{
   constructor() {

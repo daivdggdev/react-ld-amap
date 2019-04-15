@@ -9,7 +9,7 @@ Markers 组件在创建高德坐标点时，属性的设定非常灵活。
 + 定义在 Markers 的 props 属性，值是一个函数；在创建标记时，会将函数的执行结果作为属性值；如下例子中的`angle`；函数传入的参数为 `markers` 属性提供的原始数据项及该项的索引；
 
 ```jsx
-import { Map, Markers } from 'react-amap';
+import { Map, Markers } from 'react-ld-amap';
 
 const randomMarker = (len) => (
   Array(len).fill(true).map((e, idx) => ({

@@ -16,7 +16,7 @@ export default class APILoader {
       if (key) {
         this.config.key = key
       } else if ('amapkey' in window) {
-        this.config.key = window.amapkey
+        this.config.key = window.IMAPkey
       }
     }
     if (version) {
@@ -28,17 +28,30 @@ export default class APILoader {
     }
   }
 
-  getScriptSrc(cfg) {
-    return `${this.protocol}//${cfg.hostAndPath}?v=${cfg.v}&key=${cfg.key}&callback=${cfg.callback}`
-  }
+  // getScriptSrc(cfg) {
+  //   return `${this.protocol}//${cfg.hostAndPath}?v=${cfg.v}&key=${cfg.key}&callback=${cfg.callback}`
+  // }
 
   buildScriptTag(src) {
     const script = document.createElement('script')
     script.type = 'text/javascript'
-    script.async = true
-    script.defer = true
+    script.async = false
+    // script.defer = false
     script.src = src
     return script
+  }
+
+  appendScriptTag(src) {
+    const script = this.buildScriptTag(src);
+    document.body.appendChild(script)
+  }
+
+  appendLinkTag(href) {
+    const link = document.createElement('link')
+    link.rel = 'stylesheet'
+    link.href = href
+    link.async = false
+    document.body.appendChild(link)
   }
 
   getAmapuiPromise() {
@@ -53,14 +66,24 @@ export default class APILoader {
   }
 
   getMainPromise() {
-    const script = this.buildScriptTag(this.getScriptSrc(this.config))
+    const host = 'localhost';
+    this.appendScriptTag(`http://${host}:25001/as/webapi/js/auth?v=2.0&t=jsmap&ak=ec85d3648154874552835438ac6a02b2`);
+    this.appendLinkTag(`http://${host}:25002/jsmap/2.0/IMap.css`)
+    this.appendScriptTag(`http://${host}:25002/jsmap/2.0/main.js`)
+    this.appendScriptTag(`http://${host}:25002/jsmap/2.0/flash/IMapStreetView.js`)
+    this.appendScriptTag(`http://${host}:25001/as/webapi/js/auth?v=2.0&t=tool&ak=ec85d3648154874552835438ac6a02b2`)
+
+    const jsmapconfigScript = this.buildScriptTag(`http://${host}:25001/as/webapi/js/auth?v=2.0&t=jsmapconfig&ak=ec85d3648154874552835438ac6a02b2`)
     const p = new Promise(resolve => {
-      window[this.config.callback] = () => {
+      // window[this.config.callback] = () => {
+      //   resolve()
+      //   delete window[this.config.callback]
+      // }
+      jsmapconfigScript.onload = () => {
         resolve()
-        delete window[this.config.callback]
       }
     })
-    document.body.appendChild(script)
+    document.body.appendChild(jsmapconfigScript)
     return p
   }
 

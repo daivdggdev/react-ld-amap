@@ -5,7 +5,7 @@ order: 1
 
 
 ```jsx 
-import { Map, Polygon, Polyline, PolyEditor } from 'react-amap';
+import { Map, Polygon, Polyline, PolyEditor } from 'react-ld-amap';
 
 class App extends React.Component{
   constructor() {

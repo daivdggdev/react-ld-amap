@@ -4,7 +4,7 @@ title: 鸣谢
 order: 10
 ---
 
-## react-amap
+## react-ld-amap
 
 <img width="150" src="https://cloud.githubusercontent.com/assets/3898898/23833571/e5c7ae68-0782-11e7-8590-cecf4f3c969f.png" />
 

@@ -8,7 +8,7 @@ order: 6
 不过目前开启 3D 模式后，切换地图语言，以及画环形 Polygon 会有问题。
 
 ```jsx
-import { Map } from 'react-amap';
+import { Map } from 'react-ld-amap';
 class App extends React.Component{
   constructor(){
     super();
