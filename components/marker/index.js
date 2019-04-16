@@ -83,7 +83,7 @@ class Marker extends React.Component<MarkerProps, {}> {
 
   // 在创建实例时根据传入配置，设置初始化选项
   buildCreateOptions(props: MarkerProps) {
-    let opts = {}
+    let opts = new window.IMAP.MarkerOptions();
     MarkerAllProps.forEach((key) => {
       if (key in props) {
         opts[key] = this.getSetterParam(key, props[key])

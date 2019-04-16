@@ -5,6 +5,7 @@ import isFun from '../utils/isFun'
 import log from '../utils/log'
 import { toLnglat } from '../utils/common'
 import withPropsReactive from '../utils/withPropsReactive'
+import toCapitalString from '../utils/toCapitalString'
 
 const Component = React.Component
 const Children = React.Children
@@ -179,7 +180,7 @@ class BaseMap extends Component<MapProps, {mapLoaded: boolean}> {
 
   buildCreateOptions() {
     const props = this.props
-    const options = {}
+    const options = new window.IMAP.MapOptions();
     CreateProps.forEach((key) => {
       if (key in props) {
         options[key] = this.getSetterValue(key, props)
@@ -213,6 +214,19 @@ class BaseMap extends Component<MapProps, {mapLoaded: boolean}> {
       }
     })
     this.setPlugins(nextProps)
+  }
+
+  setStatus(status) {
+    if (!status || typeof status !== 'object') {
+      return log.warning(`'${status}' Map setStatus需要一个对象`);
+    }
+
+    // status.forEach((key) => {
+    //   const trySetterName = `set${toCapitalString(key)}`
+    //   if (trySetterName in this.map) {
+    //     this.map[trySetterName](setterParam)
+    //   }
+    // })
   }
 
   getSetterValue(key: string, props: MapProps) {

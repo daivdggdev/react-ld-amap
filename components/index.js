@@ -9,6 +9,8 @@ import GroundImage from './groundimage';
 import CircleEditor from './circleeditor';
 import PolyEditor from './polyeditor';
 import MouseTool from './mousetool';
+import PolylineTool from './polylinetool';
+import MarkerTool from './markertool';
 
 export {
   Map,
@@ -21,7 +23,9 @@ export {
   InfoWindow,
   GroundImage,
   Marker,
-  MouseTool
+  MouseTool,
+  PolylineTool,
+  MarkerTool
 };
 
 export default {
@@ -35,5 +39,7 @@ export default {
   InfoWindow,
   GroundImage,
   Marker,
-  MouseTool
+  MouseTool,
+  PolylineTool,
+  MarkerTool
 };
