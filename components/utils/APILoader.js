@@ -72,6 +72,11 @@ export default class APILoader {
       return Promise.resolve()
     }
 
+    const script = document.createElement('script');
+    script.text = `var host = '${this.hostProxy}';`;
+    script.async = false;
+    document.body.appendChild(script);
+
     this.appendScriptTag(`http://${this.hostProxy}:25001/as/webapi/js/auth?v=2.0&t=jsmap&ak=ec85d3648154874552835438ac6a02b2`);
     this.appendLinkTag(`http://${this.hostProxy}:25002/jsmap/2.0/IMap.css`)
     this.appendScriptTag(`http://${this.hostProxy}:25002/jsmap/2.0/main.js`)
