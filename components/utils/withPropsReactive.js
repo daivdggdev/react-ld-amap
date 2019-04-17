@@ -29,7 +29,7 @@ function withPropsReactive(MapComponent) {
       evs.length && evs.forEach(ev => {
         if (self.registeredEvents.indexOf(ev) === -1) {
           self.registeredEvents.push(ev)
-          instance.on(ev, (function(ev) {
+          instance.addEventListener(ev, (function(ev) {
             return function(...args) {
               if (self.props.events && ev in self.props.events) {
                 self.props.events[ev].apply(null, args)

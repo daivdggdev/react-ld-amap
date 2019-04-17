@@ -69,7 +69,8 @@ class Marker extends React.Component<MarkerProps, {}> {
 
   createMarker(props: MarkerProps) {
     const options = this.buildCreateOptions(props)
-    this.marker = new window.IMAP.Marker(options)
+    this.marker = new window.IMAP.Marker(options.position, options)
+    this.map.getOverlayLayer().addOverlay(this.marker, false);
 
     this.marker.render = (function(marker) {
       return function(component) {

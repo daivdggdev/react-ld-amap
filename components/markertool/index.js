@@ -21,7 +21,9 @@ class MarkerTool extends React.Component<MTProps, {}> {
         log.warning('MAP_INSTANCE_REQUIRED')
       } else {
         this.map = props.__map__
-        this.loadToolInstance();
+        setTimeout(() => {
+          this.loadToolInstance();
+        }, 13);
       }
     }
   }
@@ -35,9 +37,6 @@ class MarkerTool extends React.Component<MTProps, {}> {
   }
 
   loadToolInstance() {
-    this.tool = new window.IMAP.PolylineTool();
-    this.map.addTool(this.tool);
-
     this.tool = new window.IMAP.MarkerTool();
     // 修复多次创建标记点导致的ｙ轴偏移问题
     this.tool._createToolMarker = (function(a, b) {

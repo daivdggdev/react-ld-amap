@@ -21,7 +21,9 @@ class PolylineTool extends React.Component<PTProps, {}> {
         log.warning('MAP_INSTANCE_REQUIRED')
       } else {
         this.map = props.__map__
-        this.loadToolInstance();
+        setTimeout(() => {
+          this.loadToolInstance();
+        }, 13);
       }
     }
   }
