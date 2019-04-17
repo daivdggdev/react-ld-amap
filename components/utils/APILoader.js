@@ -10,7 +10,7 @@ let mainPromise = null
 let amapuiPromise = null
 let amapuiInited = false
 export default class APILoader {
-  constructor({ key, useAMapUI, version, protocol }) {
+  constructor({ key, useAMapUI, version, protocol, hostProxy }) {
     this.config = { ...DEFAULT_CONFIG, useAMapUI, protocol }
     if (typeof window !== 'undefined') {
       if (key) {
@@ -26,6 +26,8 @@ export default class APILoader {
     if (this.protocol.indexOf(':') === -1) {
       this.protocol += ':'
     }
+
+    this.hostProxy = hostProxy || 'localhost'
   }
 
   // getScriptSrc(cfg) {
@@ -66,14 +68,17 @@ export default class APILoader {
   }
 
   getMainPromise() {
-    const host = 'localhost';
-    this.appendScriptTag(`http://${host}:25001/as/webapi/js/auth?v=2.0&t=jsmap&ak=ec85d3648154874552835438ac6a02b2`);
-    this.appendLinkTag(`http://${host}:25002/jsmap/2.0/IMap.css`)
-    this.appendScriptTag(`http://${host}:25002/jsmap/2.0/main.js`)
-    this.appendScriptTag(`http://${host}:25002/jsmap/2.0/flash/IMapStreetView.js`)
-    this.appendScriptTag(`http://${host}:25001/as/webapi/js/auth?v=2.0&t=tool&ak=ec85d3648154874552835438ac6a02b2`)
+    if (process.env.NODE_ENV !== 'development') {
+      return Promise.resolve()
+    }
 
-    const jsmapconfigScript = this.buildScriptTag(`http://${host}:25001/as/webapi/js/auth?v=2.0&t=jsmapconfig&ak=ec85d3648154874552835438ac6a02b2`)
+    this.appendScriptTag(`http://${this.hostProxy}:25001/as/webapi/js/auth?v=2.0&t=jsmap&ak=ec85d3648154874552835438ac6a02b2`);
+    this.appendLinkTag(`http://${this.hostProxy}:25002/jsmap/2.0/IMap.css`)
+    this.appendScriptTag(`http://${this.hostProxy}:25002/jsmap/2.0/main.js`)
+    this.appendScriptTag(`http://${this.hostProxy}:25002/jsmap/2.0/flash/IMapStreetView.js`)
+    this.appendScriptTag(`http://${this.hostProxy}:25001/as/webapi/js/auth?v=2.0&t=tool&ak=ec85d3648154874552835438ac6a02b2`)
+
+    const jsmapconfigScript = this.buildScriptTag(`http://${this.hostProxy}:25001/as/webapi/js/auth?v=2.0&t=jsmapconfig&ak=ec85d3648154874552835438ac6a02b2`)
     const p = new Promise(resolve => {
       // window[this.config.callback] = () => {
       //   resolve()
