@@ -5,7 +5,7 @@ import isFun from '../utils/isFun'
 import log from '../utils/log'
 import { toLnglat } from '../utils/common'
 import withPropsReactive from '../utils/withPropsReactive'
-import toCapitalString from '../utils/toCapitalString'
+// import toCapitalString from '../utils/toCapitalString'
 
 const Component = React.Component
 const Children = React.Children

@@ -1,6 +1,6 @@
 {
   "name": "react-ld-amap",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "description": "AMap Component Based On React",
   "main": "lib/index.js",
   "types": "types/index.d.ts",
@@ -11,7 +11,7 @@
     "site": "npm run npm-build && bisheng build",
     "deploy": "npm run npm-build && bisheng gh-pages",
     "start": "npm run npm-build && bisheng start",
-    "prepublish": "npm run browser-build && npm run npm-build",
+    "prepublish": "npm run npm-build",
     "flow": "flow; test $? -eq 0 -o $? -eq 2"
   },
   "author": "ohislh@gmail.com",
