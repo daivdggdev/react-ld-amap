@@ -59,14 +59,10 @@ class Polygon extends Component<PolyProps, {loaded: boolean}> {
         const self = this
         this.setterMap = {
           visible(val) {
-            if (val) {
-              self.polygon && self.polygon.show()
-            } else {
-              self.polygon && self.polygon.hide()
-            }
+            self.polygon && self.polygon.visible(val)
           },
           style(val) {
-            self.polygon.setOptions(val)
+            self.polygon.setAttribute(val)
           }
         }
         this.converterMap = {
@@ -94,6 +90,8 @@ class Polygon extends Component<PolyProps, {loaded: boolean}> {
     const options = this.buildCreateOptions(props)
     options.map = this.map
     this.polygon = new window.IMAP.Polygon(options)
+    this.map.getOverlayLayer().addOverlay(this.polygon, false);
+
     this.setState({
       loaded: true
     })
@@ -101,7 +99,7 @@ class Polygon extends Component<PolyProps, {loaded: boolean}> {
   }
 
   buildCreateOptions(props: PolyProps) {
-    const options = {}
+    const options = new window.IMAP.PolygonOptions();
     allProps.forEach((key) => {
       if (key in props) {
         if ((key === 'style') && props.style) {
