@@ -89,7 +89,7 @@ class Polygon extends Component<PolyProps, {loaded: boolean}> {
   initMapPolygon(props: PolyProps) {
     const options = this.buildCreateOptions(props)
     options.map = this.map
-    this.polygon = new window.IMAP.Polygon(options)
+    this.polygon = new window.IMAP.Polygon(options.path, options)
     this.map.getOverlayLayer().addOverlay(this.polygon, false);
 
     this.setState({
