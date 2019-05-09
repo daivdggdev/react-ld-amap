@@ -128,7 +128,8 @@ class BaseMap extends Component<MapProps, {mapLoaded: boolean}> {
         useAMapUI: props.useAMapUI,
         version: props.version,
         protocol: props.protocol,
-        hostProxy: props.hostProxy
+        hostProxy: props.hostProxy,
+        injectScript: props.injectScript
       }).load().then(() => {
         this.createInstance()
         if (!this.state.mapLoaded) {

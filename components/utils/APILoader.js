@@ -3,6 +3,7 @@ const DEFAULT_CONFIG = {
   hostAndPath: 'webapi.amap.com/maps',
   key: 'f97efc35164149d0c0f299e7a8adb3d2',
   callback: '__amap_init_callback',
+  injectScript: false,
   useAMapUI: false
 }
 
@@ -10,8 +11,8 @@ let mainPromise = null
 let amapuiPromise = null
 let amapuiInited = false
 export default class APILoader {
-  constructor({ key, useAMapUI, version, protocol, hostProxy }) {
-    this.config = { ...DEFAULT_CONFIG, useAMapUI, protocol }
+  constructor({ key, useAMapUI, version, protocol, hostProxy, injectScript }) {
+    this.config = { ...DEFAULT_CONFIG, useAMapUI, protocol, injectScript }
     if (typeof window !== 'undefined') {
       if (key) {
         this.config.key = key
@@ -68,7 +69,8 @@ export default class APILoader {
   }
 
   getMainPromise() {
-    if (process.env.NODE_ENV !== 'development') {
+    const { injectScript } = this.config;
+    if (!injectScript) {
       return Promise.resolve()
     }
 
